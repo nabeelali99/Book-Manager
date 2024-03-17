@@ -22,7 +22,7 @@ export default function CreateBooks() {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/books", data)
+      .post("https://book-manager-backend-all8.onrender.com/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book created successfully!", { variant: "success" });
