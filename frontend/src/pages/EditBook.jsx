@@ -41,7 +41,7 @@ export default function EditBook() {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://book-manager-backend-all8.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book edited successfully!", { variant: "success" });
@@ -51,7 +51,9 @@ export default function EditBook() {
         console.log(err);
         setLoading(false);
         // alert("Something went wrong!");
-        enqueueSnackbar("Something went wrong!", { variant: "error" });
+        enqueueSnackbar("Book with the same title already exists", {
+          variant: "error",
+        });
         console.log(err);
       });
   };

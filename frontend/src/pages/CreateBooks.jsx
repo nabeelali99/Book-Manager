@@ -32,7 +32,9 @@ export default function CreateBooks() {
         console.log(err);
         setLoading(false);
         // alert("Something went wrong!");
-        enqueueSnackbar(err.message, { variant: "error" });
+        enqueueSnackbar("Book with same name already exists", {
+          variant: "error",
+        });
         console.log(err);
       });
   };
