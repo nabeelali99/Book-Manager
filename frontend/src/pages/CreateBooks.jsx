@@ -32,7 +32,7 @@ export default function CreateBooks() {
         console.log(err);
         setLoading(false);
         // alert("Something went wrong!");
-        enqueueSnackbar("Something went wrong!", { variant: "error" });
+        enqueueSnackbar(err.message, { variant: "error" });
         console.log(err);
       });
   };

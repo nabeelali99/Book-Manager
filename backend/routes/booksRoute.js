@@ -19,6 +19,13 @@ router.post("/", async (req, res) => {
       });
     }
 
+    const existingBook = await Book.findOne({ title: req.body.title });
+    if (existingBook) {
+      return res.status(400).send({
+        message: "Book with the same title already exists",
+      });
+    }
+
     const newBook = {
       title: req.body.title,
       author: req.body.author,
