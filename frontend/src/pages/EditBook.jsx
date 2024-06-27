@@ -51,7 +51,7 @@ export default function EditBook() {
         console.log(err);
         setLoading(false);
         // alert("Something went wrong!");
-        enqueueSnackbar("Book with the same title already exists", {
+        enqueueSnackbar("Somwthing Went Wrong", {
           variant: "error",
         });
         console.log(err);
